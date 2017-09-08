@@ -1,0 +1,30 @@
+<div class="col-md-9 statistiques">
+  <%= render partial: "indicators" %>
+  <script>Chart.defaults.global.defaultFontColor = '#fff';</script>
+  <div class="panel panel-default graphs">
+    <div class="panel-heading"><i class="fa fa-chart-pie"></i><%= I18n.t("graphs.title") %></div>
+    <div class="panel-body">
+      <div class="col-md-6">
+        <div class="graph-title"><span><%= I18n.t("graphs.places_diagram_title") %></span></div>
+        <%= bar_chart @places_diagram_data, @places_diagram_options %>
+      </div>
+      <div class="col-md-6">
+        <div class="graph-title"><span><%= I18n.t("graphs.sequences_diagram_title") %></span></div>
+        <%= line_chart @sequences_diagram_data, @sequences_diagram_options %>
+      </div>
+      <div class="col-md-6">
+        <div class="graph-title"><span><%= I18n.t("graphs.characters_diagram_title") %></span></div>
+        <%= bar_chart @characters_diagram_data, @characters_diagram_options %>
+      </div>
+      <div class="col-md-6">
+        <div class="graph-title"><span><%= I18n.t("graphs.remembered_diagram_title") %></span></div>
+        <%= pie_chart @remembered_diagram_data, @remembered_diagram_options %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="col-md-3 dreams">
+  <%= react_component("Sidebar", 
+        {data: @dreams}, 
+        {prerender: true}) %>
+</div>

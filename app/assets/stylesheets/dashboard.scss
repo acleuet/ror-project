@@ -1,0 +1,66 @@
+
+#dashboard{
+  background: rgb(13,30,41);
+
+  .navbar{
+    margin-bottom: 0px;
+  }
+  .row{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .panel{
+    border: 0px;
+  }
+  .panel-body{
+    background: rgb(8,59,94);
+  }
+
+  .panel-heading{
+    background: rgb(18,54,87);
+    color: white;
+  }
+
+  .vertical-menu{
+    padding-left: 0px;
+    padding-right: 10px;
+  }
+  .statistiques{
+    padding-right: 5px;
+    padding-left:0px;
+
+    .panel-heading i{
+      margin-right: 10px;
+    }
+    .graphs {
+      .col-md-6{
+        margin-bottom: 10px;
+      }
+      .graph-title{
+        text-align: center;
+        background: rgba(255,255,255,0.1);
+        margin: 5px;
+      }
+    }
+  }
+
+  .dreams{
+    padding-left:5px;
+    .panel-body{
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .statistiques {
+      .graphs {
+        .col-md-6{
+          width: 50%;
+          float: left;
+        }
+      }
+    }
+  }
+
+}

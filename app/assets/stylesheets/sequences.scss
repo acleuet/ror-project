@@ -1,0 +1,63 @@
+.form-sequences{
+  .form-content{
+    margin: auto;
+    
+    .form-group{
+      text-align: unset;
+    }
+
+    .btn-group{
+      display: inherit;
+    }
+    
+    .multiselect{
+    }
+
+    .multiselect-container{
+      max-height: 250px;
+      overflow: auto;
+    }
+
+    .add-character-btn, .add-place-btn{
+      margin-top : -15px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.show-sequence{
+  min-height: 100px;
+  background: #083b5e;
+  margin: 30px;
+  border: 0px;
+  padding-bottom: 40px;
+
+  .list-group{
+    padding-left: 10px;
+  }
+
+  .description{
+    width: 76%;
+    margin: auto;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    word-spacing: -1px;
+    font-size: 15px;
+    text-indent: 20px;
+    font-family: inherit;
+    text-align: justify;
+  }
+
+  .list-characters-heading{
+    background: darkcyan !important;
+  }
+  .list-places-heading{
+    background: peru !important;
+  }
+
+  .action-button{
+    text-align: right;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,8 @@
+<%= content_for :title, I18n.t("place.new.title") %>
+<%= simple_form_for @place, remote: request.xhr?, html: { data: { modal: true }, novalidate: false } do |f| %>
+  <%= f.input :name, label: I18n.t("place.name"), required: true %>
+  <div class="submit-button">
+    <%= f.button :submit, class:"btn btn-success", value: I18n.t("place.new.submit") %>
+  </div>
+<% end %>
+

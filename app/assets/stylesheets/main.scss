@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: font-url('glyphicons-halflings-regular.woff');
+}
+
+@font-face {
+  font-family:'Oswald';
+  src: font-url("oswald-regular.ttf");
+}
+
+@font-face {
+  font-family:'Ubuntu';
+  src: font-url("ubuntu-r.ttf");
+}
+
+body {
+font-family: 'Ubuntu', sans-serif;
+color: #fff;
+}
+
+section {
+padding-top: 30px;
+padding-bottom: 40px;
+}
+
+.pad-bottom {
+padding-bottom: 60px;
+}
+
+.header {
+font-family: 'Oswald', sans-serif;
+padding-bottom: 40px;
+text-transform: uppercase;
+}
+
+.header hr {
+width: 50px;
+border-top: 2px solid rgb(4,74,126);
+}
+
+.datepicker{
+  color: steelblue;
+}
+
+input.date_picker{
+  width: 97%;
+}
+
+.fa-smile{
+  color: limegreen;
+}
+.fa-meh{
+  color: darkorange;
+}
+.fa-frown{
+  color: rgb(215,0,0);
+}
+
+.modal{
+  color: #31708f;
+
+  .modal-content{
+    padding: 20px;
+  }
+}
+
+table a{
+  color: mintcream;
+}
+
+table td {
+  text-align: center;
+}

@@ -1,0 +1,8 @@
+<div id="flash_messages">
+  <% unless notice.nil? %>
+    <div class="alert alert-success"><span class="notice"><%= notice %></span></div>
+  <% end %>
+  <% unless alert.nil? %>
+    <div class="alert alert-danger"><span class="alert"><%= alert %></span></div>
+  <% end %>
+</div>

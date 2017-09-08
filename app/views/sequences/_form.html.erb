@@ -1,0 +1,35 @@
+<%= simple_form_for([@dream, @sequence], html: { novalidate: false }) do |f| %>
+  <div class="form-inputs">
+    <%= f.association :places, label: I18n.t("sequence.new.places"), collection: Place.owned_by(current_user), :label_method => lambda { |place| "#{place.name}" }, input_html: { class: 'multiselectplace'}, required: true %>
+    <%= link_to I18n.t("place.new.title"), new_place_path, 
+        data: { modal: true }, class:"btn btn-primary add-place-btn" %>
+    <%= f.association :characters, label: I18n.t("sequence.new.characters"), collection: Character.owned_by(current_user), :label_method => lambda { |character| "#{character.first_name} #{character.last_name}" }, input_html: { class: 'multiselectcharacter'} %>
+    <%= link_to I18n.t("character.new.title"), new_character_path, 
+        data: { modal: true }, class:"btn btn-primary add-character-btn" %>
+    <%= f.input :name, label: I18n.t("sequence.new.name"), required: true %>
+    <%= f.input :description, label: I18n.t("sequence.new.description"), as: :text %>
+  </div>
+  <div class="submit-button">
+    <%= f.button :submit, class:"btn btn-success", value: I18n.t("sequence.new.submit") %>
+    <%= f.button :submit, class:"btn btn-success", name: "submit_and_new", value: I18n.t("sequence.new.submit_and_new") %>
+  </div>
+<% end %>
+
+<script>
+
+
+$(document).ready(function() {
+    var multiSelect = $(".multiselectcharacter, .multiselectplace").multiselect({
+        enableFiltering: true,
+        filterBehavior: 'text',
+        enableCaseInsensitiveFiltering: true,
+    });
+
+    document.addEventListener("turbolinks:before-cache", function() {
+      if (multiSelect !== null) {
+        multiSelect.remove();
+        multiSelect = null;
+      }
+    });
+  });
+</script>

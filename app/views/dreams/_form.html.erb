@@ -1,0 +1,35 @@
+
+<%= simple_form_for @dream, html: { novalidate: false } do |f| %>
+  <%= f.input :date, label: I18n.t("dream.new.date"), :as => :date_picker, required: true %>
+
+  <%= f.input :feeling, 
+    :required => true,
+    :label => I18n.t("dream.new.feeling"),
+    :collection => [['happy', '<i class="fas fa-smile fa-2x"></i>'.html_safe], 
+                    ['meh', ' <i class="fas fa-meh fa-2x"></i>'.html_safe],
+                    ['frown', '<i class="fas fa-frown fa-2x"></i>'.html_safe]], 
+    :label_method => :last, 
+    :value_method => :first,
+    :as => :radio_buttons, 
+    :item_wrapper_class => 'inline'
+    %>
+
+  <%= f.input :remembered , 
+              :required => true, 
+              :as => :radio_buttons, 
+              :collection => [['Oui', true], ['Non', false]], label:I18n.t("dream.new.remembered"),
+              :item_wrapper_class => 'inline' %>
+
+  <div class="submit-button">
+    <%= f.button :submit, class:"btn btn-success", value: I18n.t("dream.new.next") %>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" style="width: 50%">
+      <span class="sr-only">50% Complete (success)</span>
+    </div>
+  </div>
+<% end %>
+<script type="text/javascript">
+    $('.datetimepicker').datetimepicker();
+</script>
+

@@ -1,0 +1,18 @@
+en:
+  date:
+      order:
+        - :day
+        - :month
+        - :year
+  dates:
+      formats:
+        day_month_year_concise: '%m-%d-%y'
+  dream:
+    date: "{{date}} night"
+    list: "List"
+    new:
+      explanation_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices lorem. Praesent tempus felis ligula, ut ullamcorper tortor varius ut. Phasellus euismod quam eget purus lobortis, sed bibendum lectus aliquet. Integer consequat maximus tincidunt. Praesent non leo non tellus pellentesque ultrices sit amet sed nibh"
+  indicator:
+    location_added: "locations added"
+    characters_added: "characters added"
+    sequences_added: "trames added"

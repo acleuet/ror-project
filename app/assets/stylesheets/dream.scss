@@ -1,0 +1,131 @@
+.form-dream{
+  input, textarea{
+    color: steelblue;
+  }
+
+  textarea{
+    min-height: 150px;
+  }
+
+  input.date_picker{
+    margin-left: 20px;
+  }
+
+  .panel-body{
+    min-height: 300px;
+  }
+
+  .form-content{
+    margin: auto;
+
+    .form-group{
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .checkbox, .radio{
+      display: inline;
+      margin-left: 10px;
+    }
+
+    .submit-button{
+      margin-top: 20px;
+      text-align:center;
+      .btn{
+        color: white;
+      }
+    }
+
+    .dream_feeling label{
+      display: inherit;
+      margin-bottom: 10px;
+    }
+
+    .dream_remembered label{
+      display: inherit;
+      margin-bottom: 10px;
+    }
+
+    .datetimepicker{
+      width: 172px;
+      display: inline-flex;
+    }
+    input.date_picker{
+      width: 114px;
+    }
+  }
+
+  form{
+    width: 55%;
+    background: rgba(255,255,255, 0.1);
+    padding: 19px;
+  }
+
+  .well{
+    background-color: #0c2e44;
+    border: 0px;
+    min-height:550px;
+  }
+
+  .progress{
+    margin-top:40px;
+    margin-bottom:0px;
+  }
+
+  .dreams-explanations{
+    padding: 10px;
+    width: 40%;
+    float: right
+  }
+
+  @media screen and (max-width: 992px) {
+    form {
+      width: 100%
+    }
+
+    .dreams-explanations{
+      width: 100%
+    }
+  }
+}
+
+.dreams-table{
+  td{
+    text-align: center;
+  }
+  td i.fas {
+    position: unset;
+  }
+  .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: steelblue;
+  }
+
+  .table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #156193;
+  }
+  table .fas{
+    color: white;
+  }
+  .panel-body{
+    min-height: 777px;
+  }
+
+  .add-dream-btn{
+    margin-bottom: 30px;
+  }
+
+}
+
+.show-dream{
+  background-color: #0c2e44;
+  min-height: 600px;
+  padding: 10px;
+
+  #main-infos{
+    h2{ margin-top : 0px; }
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid white;
+    margin: auto;
+  }
+}

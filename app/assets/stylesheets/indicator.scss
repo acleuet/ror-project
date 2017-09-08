@@ -1,0 +1,49 @@
+.indicator{
+  height: 98px;
+  background: rgb(8,59,94);
+  color:white;
+  padding: 5px;
+
+  .media{
+    height:100%;
+  }
+
+  .data{
+    text-align:left;
+    vertical-align: middle;
+    .indicator-value{
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .indicator-label{
+      font-size: 13px;
+    }
+  }
+}
+
+.indicators{
+  padding-top:15px;
+  padding-bottom: 15px;
+  background: rgb(12,46,68);
+
+  .col-md-3{
+    padding-right: 0.7%;
+    padding-left: 0.7%;
+  }
+}
+
+
+@media screen and (max-width: 992px) {
+  .indicators .col-md-3 {
+    float: left;
+    width: 25%;
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .indicator .indicator-label {
+    display: none;
+  }
+}

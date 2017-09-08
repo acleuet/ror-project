@@ -1,0 +1,18 @@
+.characters-table{
+  .table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: steelblue;
+  }
+  .table-striped>tbody>tr:nth-of-type(even) {
+    background-color: #156193;
+  }
+  
+
+  .panel-body{
+    min-height: 777px;
+  }
+
+  .add-character-btn{
+    margin-bottom: 30px;
+  }
+
+}

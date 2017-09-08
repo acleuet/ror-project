@@ -1,0 +1,24 @@
+<div class="indicators">
+  <div class="row">
+    <div class="col-md-3">
+      <%= react_component("Indicator", 
+              {label:'indicator.characters_added', value: Character.owned_by(current_user).count, logoClass:'fas fa-users', color:'#AE2422'}, 
+              {prerender: true}) %>
+    </div>
+    <div class="col-md-3">
+      <%= react_component("Indicator", 
+              {label:'indicator.sequences_added', value: Sequence.owned_by(current_user).count, logoClass:'fas fa-film', color:'#23AD8B'}, 
+              {prerender: true}) %>
+    </div>
+    <div class="col-md-3">
+      <%= react_component("Indicator", 
+              {label:'indicator.location_added', value: Place.owned_by(current_user).count, logoClass:'fas fa-map-signs', color:'#D1A836'}, 
+              {prerender: true}) %>
+    </div>
+    <div class="col-md-3">
+      <%= react_component("Indicator", 
+              {label:'indicator.nights_added', value: Dream.owned_by(current_user).count, logoClass:'fas fa-bed', color:'#4169E1'}, 
+              {prerender: true}) %>
+    </div>
+  </div>
+</div>

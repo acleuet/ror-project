@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard - Orion</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale = "<%= I18n.locale %>";
+    </script>
+    <div id="dashboard">
+      <%= react_component("Navbar", {}, {prerender: true}) %>
+      <div class="row">
+        <div class="col-md-2 vertical-menu">
+          <%= render partial: "vertical_menu/menu" %>
+        </div>
+        <div id="modal-holder"></div>
+        <div class="col-md-10">
+          <%= render partial: "shared/flash_messages" unless flash.empty? %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

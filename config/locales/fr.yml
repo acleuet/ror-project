@@ -1,0 +1,135 @@
+fr:
+  time:
+    formats:
+      default: '%d-%m-%y'
+  date:
+      order:
+        - :day
+        - :month
+        - :year
+  dates:
+      formats:
+        day_month_year_concise: '%d-%m-%y'
+  member:
+    account: "Accès membre"
+  dream:
+    errors:
+      date_already_taken: "Un rêve à cette date a déja été enregistré"
+    date: "Nuit du {{date}}"
+    list: "Mes rêves enregistrés"
+    nb_sequences: "Nombre de séquences"
+    nb_characters: "Nombre de personnages"
+    nb_places: "Nombre de lieux"
+    feeling: "Avis"
+    new:
+      title: " Ajouter un nouveau rêve"
+      explanation_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices lorem. Praesent tempus felis ligula, ut ullamcorper tortor varius ut. Phasellus euismod quam eget purus lobortis, sed bibendum lectus aliquet. Integer consequat maximus tincidunt. Praesent non leo non tellus pellentesque ultrices sit amet sed nibh"
+      feeling: "Avez vous bien dormi ?"
+      remembered: "Vous souvenez-vous de ce rêve ?"
+      date: "Date :"
+      next: "Passez à l'étape suivante (1/2)"
+    show:
+      title: "Rêve du %{date}"
+  sequence:
+    new:
+      submit: "Enregistrer mon rêve"
+      submit_and_new: Enregistrer et ajouter une autre séquence
+      name: "Titre de cette séquence"
+      description: "Raconte moi "
+      characters: "Quels sont les personnages ?"
+      places: "Quels sont les lieux ?"
+      explanation_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ultrices lorem. Praesent tempus felis ligula, ut ullamcorper tortor varius ut. Phasellus euismod quam eget purus lobortis, sed bibendum lectus aliquet. Integer consequat maximus tincidunt. Praesent non leo non tellus pellentesque ultrices sit amet sed nibh"
+  character:
+    list: "Liste des personnages"
+    appearance: "Apparitions"
+    errors:
+      first_name_must_be_defined: "Le prénom ou le nom doit être renseigné"
+      name_already_taken: ""
+    first_name: "Prénom"
+    last_name: "Nom"
+    new:
+      title: "Ajouter une nouvelle personne"
+      submit: "Validez!"
+  place:
+    list: "Liste des lieux"
+    errors:
+      name_already_taken: "Un lieu avec le même nom existe"
+    name: "Nom du lieu"
+    new:
+      title: "Ajouter un nouveau lieu"
+      submit: "Validez!"
+  indicator:
+    characters_added: "personnes citées"
+    sequences_added: "séquences ajoutées"
+    location_added: "lieux enregistrés"
+    nights_added: "nuits ajoutées"
+  graphs:
+    title: "Statistiques sur mes rêves"
+    places_diagram_title: "Lieux les plus visités"
+    characters_diagram_title: "Personnes dont je rêve le plus"
+    sequences_diagram_title: "Nombre de séquences par nuit"
+    remembered_diagram_title: "Pourcentage de rêves oubliés"
+    remembered_diagram_forgotten: "Oublié"
+    remembered_diagram_rememberred: "Mémorisé"
+  sign_in:
+    title: "Se connecter"
+    email: "Adresse mail :"
+    password: "Mot de passe"
+    remember_me: "Se souvenir de moi"
+    forgot_your_password: "Vous avez oublié votre mot de passe ?"
+  sign_up:
+    title: "S'inscrire"
+    email: "Adresse mail :"
+    password: "Mot de passe"
+    password_confirmation: "Confirmer votre mot de passe"
+  sign_out:
+    title: "Se déconnecter"
+  devise:
+    confirmations:
+      confirmed: "Votre compte a été validé."
+      send_instructions: "Vous allez recevoir les instructions nécessaires à la confirmation de votre compte dans quelques minutes."
+      send_paranoid_instructions: "Si votre e-mail existe dans notre base de données, vous allez bientôt recevoir un e-mail contenant les instructions de confirmation de votre compte."
+    failure:
+      already_authenticated: "Vous êtes déjà connecté"
+      inactive: "Votre compte n'est pas encore activé."
+      invalid: "Email ou mot de passe incorrect."
+      last_attempt: "Vous avez droit à une tentative avant que votre compte ne soit verrouillé."
+      locked: "Votre compte est verrouillé."
+      not_found_in_database: "Email ou mot de passe invalide."
+      timeout: "Votre session est expirée. Veuillez vous reconnecter pour continuer."
+      unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
+      unconfirmed: "Vous devez valider votre compte pour continuer."
+    mailer:
+      confirmation_instructions:
+        subject: "Instructions de confirmation"
+      reset_password_instructions:
+        subject: "Instructions pour changer le mot de passe"
+      unlock_instructions:
+        subject: "Instructions pour déverrouiller le compte"
+      password_change:
+        subject: "Votre mot de passe a été modifié avec succés."
+    omniauth_callbacks:
+      failure: "Nous n'avons pas pu vous authentifier via %{kind} : '%{reason}'."
+      success: "Authentifié avec succès via %{kind}."
+    passwords:
+      no_token: "Vous ne pouvez accéder à cette page sans passer par un e-mail de réinitialisation de mot de passe. Si vous êtes passé par un e-mail de ce type, assurez-vous d'utiliser l'URL complète."
+      send_instructions: "Vous allez recevoir les instructions de réinitialisation du mot de passe dans quelques instants"
+      send_paranoid_instructions: "Si votre e-mail existe dans notre base de données, vous allez recevoir un lien de réinitialisation par e-mail"
+      updated: "Votre mot de passe a été édité avec succès, vous êtes maintenant connecté"
+      updated_not_active: "Votre mot de passe a été changé avec succès."
+    registrations:
+      destroyed: "Votre compte a été supprimé avec succès. Nous espérons vous revoir bientôt."
+      signed_up: "Bienvenue, vous êtes connecté."
+      signed_up_but_inactive: "Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte n'est pas encore activé."
+      signed_up_but_locked: "Vous êtes bien enregistré. Vous ne pouvez cependant pas vous connecter car votre compte est verrouillé."
+      signed_up_but_unconfirmed: "Un message contenant un lien de confirmation a été envoyé à votre adresse email. Ouvrez ce lien pour activer votre compte."
+      update_needs_confirmation: "Votre compte a bien été mis à jour mais nous devons vérifier votre nouvelle adresse email. Merci de vérifier vos emails et de cliquer sur le lien de confirmation pour finaliser la validation de votre nouvelle adresse."
+      updated: "Votre compte a été modifié avec succès."
+    sessions:
+      signed_in: "Connecté."
+      signed_out: "Déconnecté."
+      already_signed_out: "Déconnecté."
+    unlocks:
+      send_instructions: "Vous allez recevoir les instructions nécessaires au déverrouillage de votre compte dans quelques instants"
+      send_paranoid_instructions: "Si votre compte existe, vous allez bientôt recevoir un email contenant les instructions pour le déverrouiller."
+      unlocked: "Votre compte a été déverrouillé avec succès, vous êtes maintenant connecté."

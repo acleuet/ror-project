@@ -1,0 +1,13 @@
+<div class="show-dream">
+  <div id="main-infos">
+    <h3><%= I18n.t("dream.show.title", {date: I18n.localize(@dream.date)}) %></h3>
+    <span>Lune : <%= (@moon.percent_full*100).round(1) %>% visible</span>
+    <span> - </span>
+    <span><%= @moon.phase %></span>
+  </div>
+  <div id="dream-content">
+    <% @dream.sequences.each do |sequence| %>
+      <%= render partial: "sequences/display", locals: {sequence: sequence} %>
+    <% end %>
+  </div>
+</div>

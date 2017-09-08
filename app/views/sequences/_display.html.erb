@@ -1,0 +1,47 @@
+<div class="well well-lg show-sequence">
+  <div class="action-button">
+  
+    <%= link_to '<button class="btn btn-default btn-md"><i class="fa fa-edit"></i> Editer</button>'.html_safe, [:edit, sequence.dream, sequence]  %>
+    <%= link_to '<button class="btn btn-default btn-md"><i class="fa fa-times"></i> Supprimer</button>'.html_safe, [sequence.dream, sequence], method: :delete %>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="list-characters-heading panel-heading">
+          <i class="fa fa-list"></i> Liste des personnes
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <% sequence.characters.each do |character| %>
+              <li>
+                <%= character.complete_name %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading list-places-heading">
+          <i class="fa fa-list"></i> Liste des lieux
+        </div>
+        <div class="panel-body">
+          <ul class="list-group">
+            <% sequence.places.each do |place| %>
+              <li>
+                <%= place.name %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="description">
+      <%= sequence.description %>
+    </div>
+  </div>
+</div>

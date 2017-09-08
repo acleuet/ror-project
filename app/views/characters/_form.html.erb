@@ -1,0 +1,8 @@
+<%= simple_form_for @character, remote: request.xhr?, html: { data: { modal: true }, novalidate: false } do |f| %>
+  <%= f.input :first_name, label: I18n.t("character.first_name"), required: true %>
+  <%= f.input :last_name, label: I18n.t("character.last_name")%>
+  <div class="submit-button">
+    <%= f.button :submit, class:"btn btn-success", value: I18n.t("character.new.submit") %>
+  </div>
+<% end %>
+

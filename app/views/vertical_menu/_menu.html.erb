@@ -1,0 +1,69 @@
+<div class="responsive-header visible-xs visible-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="top-section">
+                    <div class="profile-image">
+                    <%= link_to :dashboard do %>
+                        <span class="fa-stack fa-3x">
+                            <i class="fal fa-circle fa-stack-2x"></i>
+                            <i class= "fas fa-user fa-stack-1x fa-inverse" style="color:white"></i>
+                        </span>
+                    <% end %>
+                    </div>
+                    <div class="profile-content">
+                        <h3 class="profile-title"><%= hello_member %></h3>
+                        <p class="profile-description"><%= I18n.t("member.account") %></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+        <div class="main-navigation responsive-menu">
+            <ul class="navigation">
+                <li><%= link_to ('<i class="fa fa-globe"></i>'+I18n.t("dream.list")).html_safe, :dreams %></li>
+                <li><%= link_to ('<i class="fa fa-pencil"></i>'+I18n.t("dream.new.title")).html_safe, :new_dream %></li>
+                <li><%= link_to ('<i class="fa fa-pencil"></i>'+I18n.t("character.list")).html_safe, :characters %></li>
+                <li><%= link_to ('<i class="fa fa-pencil"></i>'+I18n.t("place.list")).html_safe, :places %></li>
+                <li><a href="#projects"><i class="fa fa-paperclip"></i>My Gallery</a></li>
+                <li><a href="#contact"><i class="fa fa-link"></i>Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.toggle-menu').click(function(e) {
+            $(this).toggleClass('active');
+            $('.responsive-menu').toggle();
+    
+            e.preventDefault();
+        });
+    });
+</script>
+
+<div class="sidebar-menu hidden-xs hidden-sm">
+    <div class="top-section">
+        <div class="profile-image">
+          <%= link_to :dashboard do %>
+            <span class="fa-stack fa-4x">
+                <i class="fal fa-circle fa-stack-2x"></i>
+                <i class= "fas fa-user fa-stack-1x fa-inverse" style="color:white"></i>
+            </span>
+          <% end %>
+        </div>
+        <h3 class="profile-title"><%= hello_member %></h3>
+        <p class="profile-description"><%= I18n.t("member.account") %></p>
+        <%= link_to I18n.t("sign_out.title"), destroy_user_session_path, :method => :delete %>
+    </div>
+    <div class="main-navigation">
+        <ul class="navigation">
+            <li><%= link_to ('<i class="fa fa-bed "></i>'+I18n.t("dream.list")).html_safe, :dreams %></li>
+            <li><%= link_to ('<i class="fa fa-plus"></i>'+I18n.t("dream.new.title")).html_safe, :new_dream %></li>
+            <li><%= link_to ('<i class="fa fa-user-secret"></i>'+I18n.t("character.list")).html_safe, :characters %></li>
+            <li><%= link_to ('<i class="fa fa-location-arrow"></i>'+I18n.t("place.list")).html_safe, :places %></li>
+        </ul>
+    </div>
+</div>
+
